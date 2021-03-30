@@ -94,7 +94,7 @@
                       </div>
                       <div class="form-group">
                         <label class="form-label" for="order_date">Data Ordine</label>
-                        <input class="form-control" type="datetime-local" id="order_date" name="order_date" value="{{old('order_date')}}" min="2021-03-29T11:00" max="2021-03-29T23:59">
+                        <input class="form-control" type="datetime-local" id="order_date" name="order_date" value="@php echo date('Y-m-d\TH:i'); @endphp" min="@php echo date('Y-m-d\TH:i'); @endphp" max="@php echo date('Y-m-d\T23:59'); @endphp">
                       </div>
                   </div>
                   
