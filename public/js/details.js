@@ -49657,10 +49657,6 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({
       }
     },
     addDish: function addDish(name) {
-      // var filtered = app.order.filter(
-      //     element => {
-      //         return element['name'] == name;
-      //     });
       app.order = app.order.map(function (element) {
         if (element['name'] == name) {
           var dish_name = element['name'];
@@ -49677,10 +49673,6 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({
       app.totalCount();
     },
     leaveDish: function leaveDish(name) {
-      // var filtered = app.order.filter(
-      //     element => {
-      //         return element['name'] == name;
-      //     });
       app.order = app.order.map(function (element) {
         if (element['name'] == name) {
           var dish_name = element['name'];
@@ -49775,6 +49767,13 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({
       } else {
         app.navHidden = 'hiddenList';
       }
+    },
+    scrollToTop: function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
     }
   },
   watch: {

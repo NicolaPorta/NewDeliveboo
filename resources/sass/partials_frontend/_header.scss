@@ -46,6 +46,9 @@ header {
             &:hover {
               text-decoration: none;
             }
+            &.contacts {
+              cursor: pointer;
+            }
           }
         }
         .dropdown div{

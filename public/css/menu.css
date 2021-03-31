@@ -18,10 +18,6 @@ select {
   outline: none;
 }
 
-.btn {
-  border-radius: 0 !important;
-}
-
 .hidden {
   display: none;
 }
@@ -118,6 +114,9 @@ header .nav_bar .cont_img ul li a {
 }
 header .nav_bar .cont_img ul li a:hover {
   text-decoration: none;
+}
+header .nav_bar .cont_img ul li a.contacts {
+  cursor: pointer;
 }
 header .nav_bar .cont_img ul .dropdown div {
   background-color: #a51b0b;

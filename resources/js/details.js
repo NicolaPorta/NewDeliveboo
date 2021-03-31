@@ -51,12 +51,7 @@ const app = new Vue({
                 app.totalCount();
             }
         },
-        addDish(name) {
-            // var filtered = app.order.filter(
-            //     element => {
-            //         return element['name'] == name;
-            //     });
-                
+        addDish(name) {   
             app.order = app.order.map(
                 element=> {
                     if(element['name'] == name) {
@@ -77,11 +72,6 @@ const app = new Vue({
             app.totalCount();
         },
         leaveDish(name) {
-            // var filtered = app.order.filter(
-            //     element => {
-            //         return element['name'] == name;
-            //     });
-                
             app.order = app.order.map(
                 element=> {
                     if(element['name'] == name) {
@@ -184,6 +174,13 @@ const app = new Vue({
             } else {
                 app.navHidden = 'hiddenList';
             }
+        },
+        scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
         }
     },
     watch: {

@@ -1952,7 +1952,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({
     },
     scrollContacts: function scrollContacts() {
       window.scrollTo({
-        bottom: 0,
+        top: 3000,
         left: 0,
         behavior: 'smooth'
       });

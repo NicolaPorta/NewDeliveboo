@@ -37,13 +37,13 @@ Route::post('/checkout', function(Request $request) {
   ]);
 
   $data = $request->all();
-  
+
   $order = new Order();
   $order->fill($data);
   $order->price = $data['amount'];
   $order->status="accepted";
   $order_result = $order->save();
-  
+
 
   foreach($data['dish_name'] as $key => $slug) {
       $slug = Str::slug($slug, '-');
@@ -56,7 +56,7 @@ Route::post('/checkout', function(Request $request) {
   }
   $amount = $request->amount;
   $nonce = $request->payment_method_nonce;
-  
+
   $result = $gateway->transaction()->sale([
       'amount' => $amount,
       'paymentMethodNonce' => $nonce,
@@ -64,7 +64,7 @@ Route::post('/checkout', function(Request $request) {
           'submitForSettlement' => true
       ]
   ]);
-  
+
   if ($result->success) {
       $transaction = $result->transaction;
       Mail::to($order["client_mail"])->send(new DeliveMail());
@@ -74,11 +74,11 @@ Route::post('/checkout', function(Request $request) {
         ->with('message', 'ok');
   } else {
       $errorString = "";
-  
+
       foreach($result->errors->deepAll() as $error) {
           $errorString .= 'Error: ' . $error->code . ": " . $error->message . "\n";
       }
-  
+
       // $_SESSION["errors"] = $errorString;
       // header("Location: " . $baseUrl . "index.php");
       return back()->with('message',$result->message);
@@ -137,7 +137,7 @@ Route::prefix('admin')       // prefisso delle rotte
     }
   );
 
- 
+
 
   // Route::post('/prova', 'PaymentsController@prova')->name('prova');
 
@@ -145,4 +145,3 @@ Route::prefix('admin')       // prefisso delle rotte
 
 
 
-  

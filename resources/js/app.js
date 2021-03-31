@@ -88,7 +88,7 @@ const app = new Vue({
 
         scrollContacts() {
           window.scrollTo({
-              bottom: 0,
+              top: 3000,
               left: 0,
               behavior: 'smooth'
           });
