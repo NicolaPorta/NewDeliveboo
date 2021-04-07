@@ -76,7 +76,7 @@ header .nav_bar {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  background-color: rgba(165, 27, 11, 0.9);
+  background-color: #a51b0b;
   z-index: 99;
 }
 header .nav_bar .cont_img {

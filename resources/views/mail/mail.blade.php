@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="{{ asset('css/paymentSuccess.css') }}" rel="stylesheet">
-  <title>Document</title>
+  <title>Email</title>
 </head>
 <body style="padding-top: 50px">
   <div class="container_email" style="text-align: center">

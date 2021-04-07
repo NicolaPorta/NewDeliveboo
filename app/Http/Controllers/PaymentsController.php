@@ -42,4 +42,5 @@ class PaymentsController extends Controller
         
         return view('guest.prova' , compact('data'));
     }
+
 }

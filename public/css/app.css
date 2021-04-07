@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url(https://fonts.googleapis.com/css?family=Nunito);
 @charset "UTF-8";
-
 .container_ms {
   width: 300px;
   height: 100vh;
@@ -344,6 +343,9 @@
   height: 100px;
   padding: 20px 20px 0;
   word-break: normal;
+}
+.main_ms .position_card_index_ms .position_card_index_h2_ms h2 {
+  font-size: 22px;
 }
 .main_ms .position_card_index_ms .position_card_index_category_ms {
   padding: 10px 20px 0;
